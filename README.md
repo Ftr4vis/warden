@@ -2,7 +2,7 @@
 The program for Linux directories protecting
 
 # Description
-A program that prohibits the creation, copying, deletion or renaming of files with the given names in the current (where it is located) directory, which are stored in the file template.tbl
+The program that prohibits the creation, copying, deletion or renaming of files with the given names in the current (where it is located) directory, which are stored in the file template.tbl
 
 # Install
 To compile source files use: \
