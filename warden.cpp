@@ -37,7 +37,6 @@ int main() {
         tcsetattr(STDIN_FILENO, TCSANOW, &newt);
         cin >> passwordInput;
         tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-        sleep(1);
 
         unsigned int hashInput = 0;
         for (int i = 0; i < passwordInput.length(); i++) {
@@ -52,7 +51,6 @@ int main() {
             cin >> mode_to_set;
             if (mode_to_set != 0 && mode_to_set != 1) {
                 cout << "Bad mode_to_set number!" << endl;
-                sleep(1);
                 continue;
             }
 
@@ -84,7 +82,6 @@ int main() {
         }
         else {
             cout << "Wrong password!" << endl;
-            sleep(1);
         }
     }
     exit(EXIT_SUCCESS);
@@ -115,7 +112,6 @@ static int protect(int fd, string filename, const int newAttr, int mode_to_set) 
     if (protection_is_on == 1) {
         if (mode_to_set == 1) {
             cout << "Files are already protected" << endl;
-            sleep(1);
             return 1;
         }
         else if (mode_to_set == 0) {
@@ -138,7 +134,6 @@ static int protect(int fd, string filename, const int newAttr, int mode_to_set) 
         }
         else if (mode_to_set == 0) {
             cout << "Files are already unprotected" << endl;
-            sleep(1);
             return 1;
         }
     }
